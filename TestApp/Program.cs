@@ -1,11 +1,25 @@
-﻿string[] fraudulentOrderIDs = new string[3];
+﻿/*
+This code reverses a message, counts the number of
+times a character appears in the message and then
+prints the result on the screen.
+*/
 
-string[] newArray = {"213", "123", "234"};
+string str = "The quick brown fox jumps over the lazy dog.";
 
-foreach (string s in fraudulentOrderIDs) {
-    Console.WriteLine(s);
+char[] charMessage = str.ToCharArray();
+Array.Reverse(charMessage);
+
+int x = 0;
+
+foreach (char i in charMessage)
+{
+    if (i == 'o')
+    {
+        x++;
+    }
 }
 
-foreach (string s in newArray) {
-    Console.WriteLine(s);
-}
+string new_message = new String(charMessage);
+
+Console.WriteLine(new_message);
+Console.WriteLine($"'o' appears {x} times.");
